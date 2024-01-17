@@ -28,19 +28,19 @@ foo("Second");
 
 // Inside a file system or  IO setimmediate is always executed first
 
-// const fs = require("fs");
-//  fs.readFile('./data.txt',"utf-8",(data)=>{
-//     console.log(data);
-//     setImmediate(()=>{
-//         console.log('imme');   
-//        })
-//        setTimeout(()=>{
-//        console.log('timeount');
-//            },0)
+const fs = require("fs");
+ fs.readFile('./data.txt',"utf-8",(err,data)=>{
+    console.log(data);
+    setImmediate(()=>{
+        console.log('imme');   
+       })
+       setTimeout(()=>{
+       console.log('timeount');
+           },0)
        
-//        process.nextTick(()=>{
-//            console.log('ticcccccck');
-//        })
+       process.nextTick(()=>{
+           console.log('ticcccccck');
+       })
        
-// })
+})
 // console.log("");
