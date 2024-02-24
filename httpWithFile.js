@@ -2,4 +2,6 @@ const http = require("http");
 const file = require("fs");
 
 
-http.createServer()
+http.createServer((req,res) => {
+    
+})     
